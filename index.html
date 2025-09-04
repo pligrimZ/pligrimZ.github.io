@@ -278,7 +278,7 @@ function updateProgress() {
 // 最終結果を表示
 function showResult() {
     let sorted = songs.slice().sort((a, b) => b.rating - a.rating);
-    let html = "<h2>最終ランキング (Eloレーティング順)</h2><ol>";
+    let html = "<h2>最終ランキング </h2><ol>";
     let textForCopy = "トゲナシトゲアリ 楽曲ランキング:\n\n";
     
     sorted.forEach((song, index) => {
