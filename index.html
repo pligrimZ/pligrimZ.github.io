@@ -187,7 +187,7 @@ const K_FACTOR = 32; // レーティング変動の感度
 let songs = songNames.map(name => ({ name, rating: INITIAL_RATING }));
 let pairs = [];
 let currentIndex = 0;
-const totalRounds = 10; // ラウンド数
+const totalRounds = 8; // ラウンド数
 let round = 0;
 
 // 配列をシャッフル
@@ -279,7 +279,7 @@ function updateProgress() {
 function showResult() {
     let sorted = songs.slice().sort((a, b) => b.rating - a.rating);
     let html = "<h2>最終ランキング (Eloレーティング順)</h2><ol>";
-    let textForCopy = "トゲナシトゲアリ 楽曲ランキング (Eloレーティング):\n\n";
+    let textForCopy = "トゲナシトゲアリ 楽曲ランキング:\n\n";
     
     sorted.forEach((song, index) => {
         html += `<li><strong>${song.name}</strong>（評価: ${song.rating}）</li>`;
